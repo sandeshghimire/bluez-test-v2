@@ -1,0 +1,25 @@
+
+name 'bluez-libs'
+license '(GPL2)'
+
+dep 'base'
+build_dep 'autotools'
+
+configure do
+  configure_flags = %W[
+    --prefix=#{prefix}
+    --host=#{host_config.triple}
+     --disable-dbus
+     --disable-d-bus
+
+  ]
+  cmd './configure', *configure_flags
+end
+
+build do
+  make
+end
+
+install do
+  make "install", "DESTDIR=#{dstroot}"
+end
