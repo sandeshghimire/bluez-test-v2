@@ -5,8 +5,16 @@
 #ifndef bluetooth_test_rfcomm_hpp
 #define bluetooth_test_rfcomm_hpp
 
-class Rfcomm {
+#include <iostream>
+#include <memory>
 
+class Rfcomm;
+typedef std::shared_ptr<Rfcomm> RfcommRef;
+
+class Rfcomm {
+ public:
+    Rfcomm();
+    virtual ~Rfcomm();
 };
 
 #endif //bluetooth_test_rfcomm_hpp

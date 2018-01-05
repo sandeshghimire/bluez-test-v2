@@ -3,3 +3,9 @@
 //
 
 #include "rfcomm.hpp"
+Rfcomm::Rfcomm() {
+
+}
+Rfcomm::~Rfcomm() {
+
+}
